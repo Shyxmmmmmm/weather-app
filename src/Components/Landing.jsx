@@ -70,7 +70,7 @@ const Landing = () => {
     return (
         <div className="min-h-screen bg-[#E3D8FF] flex flex-col items-center justify-center">
             <h1 className='text-2xl  font-bold mb-10'>Weather Reporting App</h1>
-            <div className="bg-[#4230BD] p-10 md:w-[50%] lg:w-[30%] rounded-2xl">
+            <div className="bg-[#4230BD] p-10 w-[80%] md:w-[50%] lg:w-[30%] rounded-2xl">
                 <div className="flex gap-10">
                     <input value={ip1} onChange={(e) => {
                         setip1(e.target.value)
