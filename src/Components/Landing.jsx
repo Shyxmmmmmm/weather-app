@@ -92,7 +92,7 @@ const Landing = () => {
                         <i className="fa-solid fa-smog fa-xl text-white"></i>
                         <div>
                             <p className='text-white'>{hmdy && `${hmdy}%`} </p>
-                            <h1 className='text-white'>Humidity</h1>
+                            <h1 className='text-white font-bold'>Humidity</h1>
                         </div>
                     </div>
 
@@ -101,7 +101,7 @@ const Landing = () => {
                         <i className="fa-solid fa-wind fa-xl text-white"></i>
                         <div>
                             <p className='text-white'>{wspeed && `${wspeed}Km/h`} </p>
-                            <h1 className='text-white'>Wind Speed</h1>
+                            <h1 className='text-white font-bold'>Wind Speed</h1>
                         </div>
                     </div>
 
