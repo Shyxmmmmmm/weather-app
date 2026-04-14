@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Sunimage from '../assets/clearsky.png'
+import Sunimage from '../assets/Clearsky.png'
 import Blackcloud from '../assets/black-cloud.png'
 import FewCloudy from '../assets/FewCloudy.png'
 import Mist from '../assets/Mist.png'
