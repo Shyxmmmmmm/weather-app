@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Sunimage from '../assets/Clearsky.png'
-import Blackcloud from '../assets/black-cloud.png'
+import Blackcloud from '../assets/Overcast-weather.png'
 import FewCloudy from '../assets/FewCloudy.png'
 import Mist from '../assets/Mist.png'
 import Rain from '../assets/rain.png'
@@ -15,7 +15,7 @@ const Landing = () => {
     const [text, settext] = useState('')
     const [temp, settemp] = useState('')
     const [img, setimg] = useState('')
-    const [icon, seticon] = useState('')
+
 
     const funcadd = () => {
 
@@ -29,15 +29,18 @@ const Landing = () => {
 
         data.then(
             function (items) {
-
                 const tempC = (items.data.main.temp - 273.15).toFixed(1)
 
-                settext(ip1)
+              
+
+                settext(ip1.trim().charAt(0).toUpperCase()+ ip1.trim().slice(1))
+
+                
                 settemp(tempC)
                 sethmdy(items.data.main.humidity)
                 setwspeed(items.data.wind.speed)
                 setip1('')
-                seticon(items.data.weather[0].icon)
+
                 console.log(items)
 
                 const iconCode = items.data.weather[0].icon
@@ -65,12 +68,16 @@ const Landing = () => {
 
                 setimg(weatherImages[iconCode])
             }
+        ).catch(
+            ()=>{
+                alert(`City Not Found ❌`)
+            }
         )
     }
     return (
         <div className="min-h-screen bg-[#E3D8FF] flex flex-col items-center justify-center">
-            <h1 className='text-2xl  font-bold mb-10'>Weather Reporting App</h1>
-            <div className="bg-[#4230BD] p-10 w-[80%] md:w-[50%] lg:w-[30%] rounded-2xl">
+            <h1 className='text-2xl  font-bold mb-10 '>Weather Reporting App</h1>
+            <div className="bg-[#4230BD] p-10 w-[80%] md:w-[50%] lg:w-[30%] rounded-2xl shadow-2xl">
                 <div className="flex gap-10">
                     <input value={ip1} onChange={(e) => {
                         setip1(e.target.value)
@@ -87,7 +94,7 @@ const Landing = () => {
 
                 <div className='flex mt-10'>
 
-                    {/* Humidity */}
+
                     <div className='flex-1 flex gap-2 items-center justify-center'>
                         <i className="fa-solid fa-smog fa-xl text-white"></i>
                         <div>
@@ -96,7 +103,7 @@ const Landing = () => {
                         </div>
                     </div>
 
-                    {/* Wind Speed */}
+
                     <div className='flex-1 flex gap-2 items-center justify-center'>
                         <i className="fa-solid fa-wind fa-xl text-white"></i>
                         <div>
