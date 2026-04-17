@@ -77,7 +77,7 @@ const Landing = () => {
     return (
         <div className="bg-[#E3D8FF] min-h-screen flex flex-col justify-center items-center">
             <h1 className="font-bold text-2xl">Weather Reporting App</h1>
-            <div className="mt-5 bg-[#4230BD] p-10 rounded-2xl md:w-[65%] w-[70%] lg:w-[30%]">
+            <div className="mt-5 bg-[#4230BD] p-10 rounded-2xl md:w-[65%] w-[90%] lg:w-[30%]">
                 <div className="flex justify-between ">
                     <input onChange={(e) => { setip1(e.target.value) }} value={ip1} type="text" placeholder="Search..." className="bg-white pl-4 p-2 w-[70%] rounded-full" />
                     <button onClick={funcadd} className="bg-white p-2 rounded-full w-10 cursor-pointer"><i className="fa-solid fa-magnifying-glass fa-xs " style={{ color: '#566566' }}></i></button>
