@@ -87,7 +87,9 @@ const Landing = () => {
                     <p className='mt-3 font-semibold text-5xl text-white'>{temp && `${temp}°C`}</p>
                     <h1 className='mt-2 font-bold text-3xl text-white'>{text}</h1>
                 </div>
-                <div className='flex mt-8 px-5 justify-between'>
+
+
+                <div className='flex mt-8 justify-between'>
                     <div className='flex items-center gap-3'>
                         <i className="fa-solid fa-smog fa-xl text-white" />
                         <div>
